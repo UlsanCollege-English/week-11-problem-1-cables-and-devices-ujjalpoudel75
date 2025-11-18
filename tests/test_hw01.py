@@ -1,5 +1,11 @@
 import pytest
-from hw01.main import build_graph, degree_dict
+import sys
+import os
+
+# Add parent directory to path
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from main import build_graph, degree_dict
 
 def test_small_undirected_basic():
     edges = [('PC1','SW1'), ('SW1','PR1'), ('PR1','PC2')]
